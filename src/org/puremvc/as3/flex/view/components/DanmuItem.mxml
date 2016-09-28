@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ObjectHandle xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			  xmlns:s="library://ns.adobe.com/flex/spark" 
+			  xmlns="com.roguedevelopment.objectHandles.*"
+			  xmlns:mx="library://ns.adobe.com/flex/mx"
+			  objectMouseDown="dispatchEvent(new Event(OBJECT_DOWN))"
+			  objectMouseOut="dispatchEvent(new Event(OBJECT_OUT))"
+			  objectMouseOver="dispatchEvent(new Event(OBJECT_OVER))">
+	
+	<fx:Script>
+		<![CDATA[
+			public var duration:uint;
+			public static const OBJECT_DOWN:String = "objectDown";
+			public static const OBJECT_OVER:String = "objectOver";
+			public static const OBJECT_OUT:String = "objectOut";
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<mx:AnimateProperty id="dmAnimate" target="{this}" property="x"/>
+	</fx:Declarations>
+	
+	<s:Group id="group">
+		<s:layout>
+			<s:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+		</s:layout>
+		<s:Image id="img" width="70" height="70"/>
+		<s:Label id="lbText" color="black"/>
+	</s:Group>
+</ObjectHandle>

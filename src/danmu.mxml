@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:components="org.puremvc.as3.flex.view.components.*"
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600"
+			   creationComplete="{facade.startup(this)}">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import org.puremvc.as3.flex.ApplicationFacade;
+			private var facade:ApplicationFacade = ApplicationFacade.getInstance();
+		]]>
+	</fx:Script>
+	
+	<mx:Panel title="videoShow" horizontalCenter="0">
+		<components:VideoShow id="VideoShow"/>
+	</mx:Panel>	
+</s:Application>
